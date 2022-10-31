@@ -1,0 +1,14 @@
+<section class="property-binding">
+  <article>
+    <h2>Interpolation</h2>
+    <p>String by interpolation: {{ url }}</p>
+    <p>Expressions {{ 1 + 5 * getFifty() === 251 }}</p>
+  </article>
+
+  <article>
+    <h2>Property binding 2 ways</h2>
+    <img src="{{ urlImage }}" alt="Computer image">
+    <img [src]="urlImage" alt="Computer image">
+    <img bind-src="urlImage" alt="Computer image">
+  </article>
+</section>

@@ -1,8 +1,9 @@
-import { CoursesModule } from './courses/courses.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CoursesModule } from './courses/courses.module';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 import { MyFirstComponent } from './my-first/my-first.component';
 import { MySecondComponent } from './my-second/my-second.component';
 
@@ -10,13 +11,16 @@ import { MySecondComponent } from './my-second/my-second.component';
   declarations: [
     AppComponent,
     MyFirstComponent,
-    MySecondComponent
+    MySecondComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
     CoursesModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
