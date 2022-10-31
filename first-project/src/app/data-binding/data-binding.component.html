@@ -50,4 +50,32 @@
     </div>
     </div>
   </article>
+  <article>
+    <h2>Event binding</h2>
+    <div>
+      <button
+      class="btn btn-primary"
+      (click)="handleButtonClick()"
+      >
+        Click Here
+      </button>
+      <br>
+      <input type="text"
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="saveInputText(inputField.value)"
+        (blur)="saveInputText(inputField.value)"
+        #inputField
+      >
+      <p>Current value: {{ inputText }}</p>
+      <p>Saved value: {{ savedInput }}</p>
+      <br><br>
+      <span
+        (mouseover)="onMouseOver()"
+        (mouseout)="onMouseOver()"
+        [class.highlight] = "isMouseOver"
+      >
+        Hover mouse here
+      </span>
+    </div>
+  </article>
 </section>

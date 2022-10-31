@@ -10,13 +10,31 @@ export class DataBindingComponent implements OnInit {
   url: string = 'https://loaine.training';
   urlImage: string = 'https://cdn.pixabay.com/photo/2016/02/17/15/37/laptop-1205256_960_720.jpg'
 
+  inputText: string = '';
+  savedInput: string = '';
+  isMouseOver: boolean = false;
+
   constructor() { }
 
   getFifty(): number {
     return 50;
   }
 
-  ngOnInit(): void {
+  handleButtonClick() {
+    alert('Button clicked');
   }
 
+  onKeyUp(event: KeyboardEvent) {
+    this.inputText = (<HTMLInputElement>event.target).value;
+  }
+
+  saveInputText(value: string) {
+    this.savedInput = value;
+  }
+
+  onMouseOver() {
+    this.isMouseOver = !this.isMouseOver;
+  }
+
+  ngOnInit(): void {}
 }
