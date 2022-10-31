@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CourseService } from './course.service';
+
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
@@ -9,10 +11,11 @@ export class CoursesComponent implements OnInit {
 
   platformUrl: string;
 
-  courses: string[] = ['Java', 'Angular', 'Ext JS'];
+  courses: string[];
 
-  constructor() {
+  constructor(private courseService: CourseService) {
     this.platformUrl = 'https://loiane.tranining';
+    this.courses = courseService.getCourses();
    }
 
   ngOnInit(): void {
