@@ -4,11 +4,50 @@
     <p>String by interpolation: {{ url }}</p>
     <p>Expressions {{ 1 + 5 * getFifty() === 251 }}</p>
   </article>
-
   <article>
     <h2>Property binding 2 ways</h2>
     <img src="{{ urlImage }}" alt="Computer image">
     <img [src]="urlImage" alt="Computer image">
     <img bind-src="urlImage" alt="Computer image">
+  </article>
+  <article>
+    <h2>Class and Style binding</h2>
+    <div>
+      Choose a class:
+      <select #classChosen (change)="0">
+        <option value="alert-success">Success</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Warning</option>
+        <option value="alert-danger">Danger</option>
+      </select>
+      <br><br>
+      <div class="alert {{classChosen.value}}">Color according to option</div>
+      <div
+        class="alert {{classChosen.value}}"
+        [style.display]="classChosen.value === 'alert-danger' ? 'block' : 'none'"
+      >
+        This div shows just on danger
+      </div>
+      <div
+        class="alert" role="alert"
+        [class.alert-success]="classChosen.value === 'alert-success'"
+      >Success
+    </div>
+      <div
+        class="alert" role="alert"
+        [class.alert-info]="classChosen.value === 'alert-info'"
+      >Info
+    </div>
+      <div
+        class="alert" role="alert"
+        [class.alert-warning]="classChosen.value === 'alert-warning'"
+      >Warning
+    </div>
+      <div
+        class="alert" role="alert"
+        [class.alert-danger]="classChosen.value === 'alert-danger'"
+      >Danger
+    </div>
+    </div>
   </article>
 </section>
