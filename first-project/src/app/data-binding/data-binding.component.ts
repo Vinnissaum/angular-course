@@ -13,6 +13,7 @@ export class DataBindingComponent implements OnInit {
   inputText: string = '';
   savedInput: string = '';
   isMouseOver: boolean = false;
+  varName: string = 'via component props';
 
   constructor() { }
 
