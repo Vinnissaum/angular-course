@@ -1,0 +1,19 @@
+<article>
+  <h2>Two way data binding</h2>
+  <input type="text"
+    [value]="name"
+    (input)="name = fieldName.value"
+    #fieldName
+  >
+  <p>Out: {{ name }}</p>
+
+  <input type="text"
+    [(ngModel)]="name"
+  >
+  <p>Out: {{ name }}</p>
+
+  <input type="text" [(ngModel)]="person.name" >
+  <input type="text" [(ngModel)]="person.age" >
+  <p>My name is {{ person.name }} and I am {{ person.age }} years old.</p>
+
+</article>
