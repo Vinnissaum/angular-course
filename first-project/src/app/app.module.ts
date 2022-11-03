@@ -9,6 +9,7 @@ import { InputPropertyComponent } from './input-property/input-property.componen
 import { MyFirstComponent } from './my-first/my-first.component';
 import { MyFormComponent } from './my-form/my-form.component';
 import { MySecondComponent } from './my-second/my-second.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MySecondComponent } from './my-second/my-second.component';
     MySecondComponent,
     MyFormComponent,
     DataBindingComponent,
-    InputPropertyComponent
+    InputPropertyComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,

@@ -84,5 +84,10 @@
   <article>
     <h2>Input/Output properties</h2>
     <app-input-property [prop]="varName"></app-input-property>
+
+    <counter
+      [value]="initialCounterValue"
+      (newValue)="onValueChange($event)"
+    ></counter>
   </article>
 </section>
