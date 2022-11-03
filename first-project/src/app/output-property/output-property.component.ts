@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class OutputPropertyComponent implements OnInit {
 
   constructor() { }
-  @Input() value: string = '0';
+@Input() value: string = '0';
 
   @Output() newValue = new EventEmitter();
 

@@ -10,6 +10,7 @@ import { MyFirstComponent } from './my-first/my-first.component';
 import { MyFormComponent } from './my-form/my-form.component';
 import { MySecondComponent } from './my-second/my-second.component';
 import { OutputPropertyComponent } from './output-property/output-property.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
     MyFormComponent,
     DataBindingComponent,
     InputPropertyComponent,
-    OutputPropertyComponent
+    OutputPropertyComponent,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule,

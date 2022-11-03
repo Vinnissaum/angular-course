@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'first-project';
   message = 'Hello World!';
+  updatedValue: number = 5454;
+  isDestroyed: boolean = false;
+
+  incrementValue() {
+    this.updatedValue++;
+  }
+
+  destroy() {
+    this.isDestroyed = true;
+  }
 }
