@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'counter',
@@ -8,17 +8,21 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class OutputPropertyComponent implements OnInit {
 
   constructor() { }
-@Input() value: string = '0';
+  @Input() value: number = 0;
+
+  @ViewChild('inputField', { static: false }) inputValue!: ElementRef;
 
   @Output() newValue = new EventEmitter();
 
   plusValue() {
-    this.value = (parseInt(this.value) + 1).toString();
+    this.inputValue.nativeElement.value++;
+    // this.value = (parseInt(this.value) + 1).toString();
     this.newValue.emit({ updatedValue: this.value });
   }
 
   minusValue() {
-    this.value = (parseInt(this.value) - 1).toString();
+    this.inputValue.nativeElement.value--;
+    // this.value = (parseInt(this.value) - 1).toString();
     this.newValue.emit({ updatedValue: this.value });
   }
 

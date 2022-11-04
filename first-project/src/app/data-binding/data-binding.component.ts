@@ -14,7 +14,7 @@ export class DataBindingComponent implements OnInit {
   savedInput: string = '';
   isMouseOver: boolean = false;
   varName: string = 'via component props';
-  initialCounterValue: string = '10';
+  initialCounterValue: number = 10;
 
   constructor() { }
 
