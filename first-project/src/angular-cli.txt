@@ -1,0 +1,30 @@
+Create new project:
+  -> ng new <project name>
+
+Start server:
+  -> ng serve
+
+Create new component:
+  -> ng generate <component name>
+    -> ng g c <component name>
+
+Create new service:
+  -> ng generate service <service name>
+    -> ng g s <service name>
+
+CSS preprocessor:
+  Create project with CSS preprocessor
+    -> ng new <project name> --style=sass
+  Changing on created projects:
+    -> ng set defaults.styleExt scss
+
+Verify code:
+  -> ng lint
+
+Run tests:
+  -> ng test
+  -> ng e2e
+
+Generate build project:
+  -> ng build (development build)
+  -> ng build --prod (production build)
